@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <title>Login - Engine Talk</title>
   <link rel="stylesheet" href="login.css">
@@ -12,29 +12,29 @@
     <a href="home.html">Home</a>
     <a href="#">Browse Cars</a>
     <a href="#">About</a>
-    <a href="login.html">Login</a>
+    <a href="login.html" id="loginLink">Login</a>
+    <span id="userArea"></span>
   </nav>
 </header>
 
 <section class="login-section">
   <div class="login-box">
-    <h2>Login</h2>
 
+    <h2 id="formTitle">Login</h2>
+
+    <input type="text" id="name" placeholder="Full Name (Sign Up Only)" style="display:none;">
     <input type="email" id="email" placeholder="Enter Email">
     <input type="password" id="password" placeholder="Enter Password">
 
-    <div class="remember">
-      <input type="checkbox" id="remember">
-      <label for="remember">Remember Me</label>
-    </div>
-
-    <button onclick="login()">Login</button>
+    <button onclick="submitForm()">Login</button>
 
     <p id="message"></p>
 
-    <p class="signup">
-      New user? <a href="#">Sign Up</a>
+    <p>
+      <span id="toggleText">New user?</span>
+      <a href="#" onclick="toggleForm()">Sign Up</a>
     </p>
+
   </div>
 </section>
 
