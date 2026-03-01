@@ -53,19 +53,6 @@
 </div>
 </section>
 <script src="home.js"></script>
-<script>
-  const user = localStorage.getItem("userName");
 
-  if (user) {
-    document.getElementById("welcomeUser").innerText = "Welcome, " + user;
-    document.getElementById("loginBtn").style.display = "none";
-    document.getElementById("logoutBtn").style.display = "inline";
-  }
-
-  function logout() {
-    localStorage.clear();
-    location.reload();
-  }
-</script>
 </body>
 </html>
