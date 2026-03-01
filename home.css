@@ -5,7 +5,7 @@ body{
     color:white;
 }
 
-/* Header */
+
 
 header{
 display:flex;
@@ -26,7 +26,7 @@ nav a:hover{
 color:#00bfff;
 }
 
-/* Hero Section */
+
 
 .mySection{
 height:100vh;
@@ -49,7 +49,7 @@ color:#ccc;
 margin-bottom:20px;
 }
 
-/* Button */
+
 
 button{
 background:#0077ff;
@@ -67,7 +67,7 @@ background:#005ce6;
 transform:scale(1.05);
 }
 
-/* Cars Section */
+
 
 .cars{
 padding:80px 60px;
@@ -79,7 +79,7 @@ margin-bottom:50px;
 font-size:32px;
 }
 
-/* Car Container */
+
 
 .car-container{
 display:flex;
@@ -88,7 +88,7 @@ flex-wrap:wrap;
 justify-content:center;
 }
 
-/* Car Card */
+
 
 .car{
 background:#1a1a1a;
@@ -105,7 +105,7 @@ transform:translateY(-8px);
 box-shadow:0 0 25px rgba(0,119,255,0.7);
 }
 
-/* Car Image */
+
 
 .car img{
 width:100%;
