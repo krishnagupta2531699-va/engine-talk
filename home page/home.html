@@ -13,7 +13,9 @@
 <a href="#">Home</a>
 <a href="#">Browse Cars</a>
 <a href="#">About</a>
-<a href="#">Login</a>
+<a href="login.html" id="loginBtn">Login</a>
+<span id="welcomeUser"></span>
+<button onclick="logout()" id="logoutBtn" style="display:none;">Logout</button>
 </nav>
 </header>
 
@@ -51,5 +53,19 @@
 </div>
 </section>
 <script src="home.js"></script>
+<script>
+  const user = localStorage.getItem("userName");
+
+  if (user) {
+    document.getElementById("welcomeUser").innerText = "Welcome, " + user;
+    document.getElementById("loginBtn").style.display = "none";
+    document.getElementById("logoutBtn").style.display = "inline";
+  }
+
+  function logout() {
+    localStorage.clear();
+    location.reload();
+  }
+</script>
 </body>
 </html>
