@@ -1,0 +1,116 @@
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#0d0d0d;
+    color:white;
+}
+
+
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+background:black;
+}
+
+nav a{
+color:white;
+margin:10px;
+text-decoration:none;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#00bfff;
+}
+
+
+
+.mySection{
+height:100vh;
+background-image:url('../home images/image1.png');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+padding-left:60px;
+}
+
+.mySectiontext h2{
+font-size:48px;
+color:#00bfff;
+margin-bottom:10px;
+}
+
+.mySectiontext p{
+color:#ccc;
+margin-bottom:20px;
+}
+
+
+
+button{
+background:#0077ff;
+color:white;
+border:none;
+padding:10px 20px;
+cursor:pointer;
+border-radius:5px;
+font-weight:bold;
+transition:0.3s;
+}
+
+button:hover{
+background:#005ce6;
+transform:scale(1.05);
+}
+
+
+
+.cars{
+padding:80px 60px;
+text-align:center;
+}
+
+.cars h2{
+margin-bottom:50px;
+font-size:32px;
+}
+
+
+
+.car-container{
+display:flex;
+gap:40px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+
+
+.car{
+background:#1a1a1a;
+padding:20px;
+border-radius:12px;
+text-align:center;
+width:260px;
+box-shadow:0 0 15px rgba(0,0,0,0.6);
+transition:0.4s;
+}
+
+.car:hover{
+transform:translateY(-8px);
+box-shadow:0 0 25px rgba(0,119,255,0.7);
+}
+
+
+
+.car img{
+width:100%;
+height:180px;
+object-fit:cover;
+border-radius:10px;
+margin-bottom:15px;
+}
