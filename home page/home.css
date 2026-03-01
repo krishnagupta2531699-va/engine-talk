@@ -30,7 +30,7 @@ color:#00bfff;
 
 .mySection{
 height:100vh;
-background-image:url('../home images/image1.png');
+background-image:url('home images/image1.png');
 background-size:cover;
 background-position:center;
 display:flex;
