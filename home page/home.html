@@ -13,9 +13,13 @@
 <a href="#">Home</a>
 <a href="#">Browse Cars</a>
 <a href="#">About</a>
+<a href="../addtocart page/addtocart.html">🛒 Cart </a>
+
 <a href="../login page/login.html" id="loginBtn">Login</a>
+
 <span id="welcomeUser"></span>
 <button onclick="logout()" id="logoutBtn" style="display:none;">Logout</button>
+
 </nav>
 </header>
 
@@ -32,23 +36,29 @@
 <h2>Browse Cars</h2>
 <div class="car-container">
 <div class="car">
-<img src="home images/image2.png" alt="BMW M3" >
+<img src="images/image2.png" alt="BMW M3" >
 <h3>BMW M3</h3>
 <p>$45,000</p>
-<button>View Details</button>
+<button onclick="addToCart('BMW M3',45000)">
+Add to Cart
+</button>
 </div>
 <div class="car">
-  <img src="home images/image3.png" alt="Audi R8">
+  <img src="images/image3.png" alt="Audi R8">
   <h3>Audi R8</h3>
   <p>$120,000</p>
-  <button>View Details</button>
 
+<button onclick="addToCart('Audi R8',120000)">
+Add to Cart
+</button>
 </div>
 <div class="car">
-<img src="home images/image4.png" alt="Lamborghini" >
+<img src="images/image4.png" alt="Lamborghini" >
 <h3>Lamborghini Huracan</h3>
 <p>$230,000</p>
-<button>View Details</button>
+<button onclick="addToCart('Lamborghini Huracan',230000)">
+Add to Cart
+</button>
 </div>
 </div>
 </section>

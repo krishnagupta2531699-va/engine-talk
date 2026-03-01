@@ -1,6 +1,10 @@
 function browse(){
     alert("Browse Cars Section");
 }
+
+
+
+//------------------Login----------------------------------//
   const user = localStorage.getItem("userName");
 
   if (user) {
@@ -13,3 +17,23 @@ function browse(){
     localStorage.clear();
     location.reload();
   }
+//-----------------------------------------------------------//
+
+
+
+//------------------Cart------------------------------------//
+function addToCart(name, price){
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+let item=({
+    name: name,
+    price: price,
+ 
+});
+cart.push(item);
+localStorage.setItem("cart", JSON.stringify(cart));
+alert(`${name} Added to cart`);
+}
+
+//---------------------------------------------------------//
