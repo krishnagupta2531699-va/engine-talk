@@ -114,3 +114,24 @@ object-fit:cover;
 border-radius:10px;
 margin-bottom:15px;
 }
+
+
+
+.browse-btn{
+display:inline-block;
+margin-top:20px;
+
+background:#2b7cff;
+color:white;
+
+padding:12px 28px;
+
+font-size:16px;
+font-weight:bold;
+
+text-decoration:none;
+
+border-radius:6px;
+
+transition:0.3s;
+}
