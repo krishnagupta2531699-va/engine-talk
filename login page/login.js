@@ -7,18 +7,21 @@ function toggleForm() {
   const title = document.getElementById("formTitle");
   const button = document.querySelector("button");
   const toggleText = document.getElementById("toggleText");
+  const toggleLink = toggleText.nextElementSibling;
 
   if (isSignup) {
     nameField.style.display = "block";
     title.innerText = "Sign Up";
     button.innerText = "Sign Up";
     toggleText.innerText = "Already have an account?";
+    toggleLink.innerText = "Sign In";
   } else {
     nameField.style.display = "none";
     title.innerText = "Login";
     button.innerText = "Login";
     toggleText.innerText = "New user?";
-  }
+    toggleLink.innerText = "Sign Up"; 
+  } 
 }
 
 function submitForm() {
