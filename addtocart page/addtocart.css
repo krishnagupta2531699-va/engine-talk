@@ -1,7 +1,7 @@
 
 
 
-
+/* 
 body{
 margin:0;
 font-family:Arial, Helvetica, sans-serif;
@@ -60,15 +60,7 @@ margin-top:20px;
 
 
 
-/* .cartItem{
-display:flex;
-align-items:center;
-justify-content:space-between;
-background:rgba(20,20,20,0.8);
-padding:20px;
-margin-bottom:20px;
-border-radius:10px;
-} */
+
 
 
 
@@ -87,6 +79,109 @@ padding:10px 15px;
 cursor:pointer;
 border-radius:5px;
 }
+
+.carImage{
+width:120px;
+height:80px;
+object-fit:cover;
+border-radius:8px;
+}
+
+.itemLeft{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.cartItem{
+display:flex;
+align-items:center;
+justify-content:space-between;
+background:rgba(20,20,20,0.8);
+padding:20px;
+margin-bottom:20px;
+border-radius:10px;
+gap:20px;
+} */
+
+
+
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+color:white;
+
+background-image:url("img.png");
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+}
+
+/* HEADER */
+
+header{
+background:black;
+display:flex;                 /* aligns logo and nav */
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;            /* spacing inside navbar */
+position:fixed;               /* keeps navbar at top */
+top:0;
+left:0;
+width:100%;
+z-index:1000;
+}
+
+/* NAV LINKS */
+
+nav a{
+color:white;
+margin:10px;
+text-decoration:none;
+}
+
+/* CART SECTION */
+
+.cart-section{
+padding:120px 0;              /* increased to avoid navbar overlap */
+}
+
+/* CART BOX */
+
+.cart-box{
+width:70%;
+margin:auto;
+background:rgba(0,0,0,0.6);
+padding:40px;
+border-radius:15px;
+backdrop-filter:blur(10px);
+}
+
+h2{
+margin-bottom:20px;
+}
+
+#cartContainer{
+margin-top:20px;
+}
+
+#cartSummary{
+margin-top:30px;
+text-align:right;
+}
+
+/* BUTTON */
+
+button{
+background:#0077ff;
+color:white;
+border:none;
+padding:10px 15px;
+cursor:pointer;
+border-radius:5px;
+}
+
+/* CART ITEMS */
 
 .carImage{
 width:120px;
