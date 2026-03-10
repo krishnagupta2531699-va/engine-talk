@@ -143,7 +143,11 @@ text-decoration:none;
 /* CART SECTION */
 
 .cart-section{
-padding:120px 0;              /* increased to avoid navbar overlap */
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+margin-top:80px;
 }
 
 /* CART BOX */
