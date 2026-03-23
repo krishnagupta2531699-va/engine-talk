@@ -1,4 +1,4 @@
-/* Reset */
+
 *{
     margin:0;
     padding:0;
@@ -6,7 +6,6 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* BODY BACKGROUND */
 body{
     height:100vh;
     background: url("login bg.jpeg") no-repeat center center/cover;
@@ -14,7 +13,6 @@ body{
     flex-direction:column;
 }
 
-/* HEADER */
 header{
     display:flex;
     justify-content:space-between;
@@ -40,7 +38,6 @@ nav a:hover{
     color:#00eaff;
 }
 
-/* LOGIN SECTION */
 .login-section{
     flex:1;
     display:flex;
@@ -48,7 +45,6 @@ nav a:hover{
     align-items:center;
 }
 
-/* LOGIN BOX */
 .login-box{
     width:350px;
     padding:40px;
@@ -64,13 +60,12 @@ nav a:hover{
     text-align:center;
 }
 
-/* TITLE */
+
 .login-box h2{
     color:white;
     margin-bottom:25px;
 }
 
-/* INPUT FIELDS */
 .login-box input{
     width:100%;
     padding:12px;
@@ -81,7 +76,7 @@ nav a:hover{
     font-size:14px;
 }
 
-/* BUTTON */
+
 .login-box button{
     width:100%;
     padding:12px;
@@ -101,7 +96,7 @@ nav a:hover{
     transform:scale(1.05);
 }
 
-/* TEXT */
+
 .login-box p{
     color:white;
     margin-top:15px;
