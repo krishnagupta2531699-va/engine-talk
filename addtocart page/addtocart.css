@@ -120,19 +120,24 @@ background-attachment:fixed;
 /* HEADER */
 
 header{
-background:black;
-display:flex;                 /* aligns logo and nav */
-justify-content:space-between;
-align-items:center;
-padding:20px 60px;            /* spacing inside navbar */
-position:fixed;               /* keeps navbar at top */
-top:0;
-left:0;
-width:100%;
-z-index:1000;
+    background:black;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 30px;   /* reduced padding */
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    box-sizing:border-box;  /* VERY IMPORTANT */
 }
 
 /* NAV LINKS */
+nav{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;   /* prevents overflow */
+}
 
 nav a{
 color:white;
