@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Engine Talk</title>
+
+  <
+  <link rel="stylesheet" href="home.css">
+
+ 
+</head>
+<body>
+
+ 
+  <header>
+    <a class="logo" href="#">
+      <span class="logo-dot"></span>
+      ENGINE TALK
+    </a>
+    <nav>
+ <a href="../homepage/home.html">Home</a>
+   <a href="../browse cars/browsecars.html">Browse Cars</a>
+ <a href="../about us/aboutus.html">About</a>
+<a href="../addtocart page/addtocart.html">🛒 Cart </a>
+<a href="../login page/login.html"   id="loginBtn" class="nav-cta">Login</a>
+      
+      <span id="welcomeUser"></span>
+      <button onclick="logout()" id="logoutBtn" style="display:none;">Logout</button>
+    </nav>
+  </header>
+
+
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-grid"></div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow">Premium Car Marketplace</div>
+      <h1>
+        FIND YOUR<br>
+        DREAM<br>
+        <span class="outline">MACHINE</span>
+      </h1>
+      <p class="hero-sub">Buy. Sell. Rev It Up — the finest vehicles, curated for those who demand more from every drive.</p>
+      <div class="hero-actions">
+        <a href="../browse cars/browsecars.html" class="btn-primary">
+          Browse Cars <em class="arrow">→</em>
+        </a>
+        <a href="../about us/aboutus.html" class="btn-ghost">Learn More</a>
+      </div>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num">500<em>+</em></div>
+        <div class="stat-label">Cars Listed</div>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat">
+        <div class="stat-num">12<em>K</em></div>
+        <div class="stat-label">Happy Buyers</div>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat">
+        <div class="stat-num">98<em>%</em></div>
+        <div class="stat-label">Satisfaction</div>
+      </div>
+    </div>
+
+    <div class="scroll-hint">
+      <div class="scroll-line"></div>
+      Scroll to explore
+    </div>
+  </section>
+  <div class="search-section">
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="searchBox" placeholder="Search by brand, model, or year…">
+    </div>
+  </div>
+
+
+  <section class="cars-section">
+    <div class="sec-header">
+      <div class="sec-label">Featured Vehicles</div>
+      <h2 class="sec-title">HANDPICKED COLLECTION</h2>
+      <p class="sec-sub">Only the finest machines make our list.</p>
+    </div>
+
+    <div class="car-grid">
+
+      <div class="car-card">
+        <div class="car-img-wrap">
+          <span class="car-badge">⭐ 4.8 · 2022</span>
+          <img src="images/image2.png" alt="BMW M3">
+        </div>
+        <div class="car-body">
+          <div class="car-name">BMW M3</div>
+          <div class="car-meta">
+            <span>⚡ Petrol</span>
+            <span>🗓 2022</span>
+            <span>⭐ 4.8</span>
+          </div>
+          <div class="car-footer">
+            <div class="car-price"><sup>$</sup>45,000</div>
+            <button class="add-btn" onclick="addToCart('BMW M3', 45000)">+ Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="car-card">
+        <div class="car-img-wrap">
+          <span class="car-badge">⭐ 4.9 · 2023</span>
+          <img src="images/image3.png" alt="Audi R8">
+        </div>
+        <div class="car-body">
+          <div class="car-name">AUDI R8</div>
+          <div class="car-meta">
+            <span>⚡ Petrol</span>
+            <span>🗓 2023</span>
+            <span>⭐ 4.9</span>
+          </div>
+          <div class="car-footer">
+            <div class="car-price"><sup>$</sup>120,000</div>
+            <button class="add-btn" onclick="addToCart('Audi R8', 120000)">+ Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="car-card">
+        <div class="car-img-wrap">
+          <span class="car-badge">⭐ 5.0 · 2023</span>
+          <img src="images/image4.png" alt="Lamborghini Huracan">
+        </div>
+        <div class="car-body">
+          <div class="car-name">LAMBORGHINI HURACÁN</div>
+          <div class="car-meta">
+            <span>⚡ Petrol</span>
+            <span>🗓 2023</span>
+            <span>⭐ 5.0</span>
+          </div>
+          <div class="car-footer">
+            <div class="car-price"><sup>$</sup>230,000</div>
+            <button class="add-btn" onclick="addToCart('Lamborghini Huracan', 230000)">+ Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+
+  <section class="why-section">
+    <div class="sec-header">
+      <div class="sec-label">Why Engine Talk</div>
+      <h2 class="sec-title">BUILT FOR CAR LOVERS</h2>
+      <p class="sec-sub">We raise the bar on every front, so you can focus on the drive.</p>
+    </div>
+
+    <div class="why-grid">
+      <div class="why-card">
+        <span class="why-icon">✅</span>
+        <h3>TRUSTED DEALERS</h3>
+        <p>Every seller on our platform is thoroughly verified. Safe, secure, and reliable transactions — guaranteed every time.</p>
+      </div>
+      <div class="why-card">
+        <span class="why-icon">💰</span>
+        <h3>BEST PRICES</h3>
+        <p>Competitive pricing backed by real-time market data. No inflated costs, no hidden fees — just the best deals available.</p>
+      </div>
+      <div class="why-card">
+        <span class="why-icon">⚡</span>
+        <h3>FAST DELIVERY</h3>
+        <p>From purchase to driveway in record time. Our logistics network ensures a smooth, completely hassle-free handover.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="logo" href="#">
+          <span class="logo-dot"></span>
+          ENGINE TALK
+        </a>
+        <p>Your trusted marketplace for premium automobiles. Drive your dream today.</p>
+      </div>
+      <div class="footer-nav">
+       <a href="../homepage/home.html">Home</a>
+        <a href="../browse cars/browsecars.html">Browse Cars</a>
+        <a href="../about us/aboutus.html">About</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 ENGINE TALK — ALL RIGHTS RESERVED</p>
+      <div class="footer-dot"></div>
+      <p>MADE WITH PASSION FOR MACHINES</p>
+    </div>
+  </footer>
+
+
+  <div class="toast" id="toast">
+    <span>🛒</span>
+    <span id="toastMsg">Added to cart!</span>
+  </div>
+
+  <script src="home.js"></script>
+</body>
+</html>
