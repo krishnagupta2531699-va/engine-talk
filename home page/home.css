@@ -1,0 +1,271 @@
+/* home.css — Engine Talk Home Page */
+/* NOTE: shared.css is loaded first for navbar, fonts, variables */
+
+/* ── HERO SECTION ── */
+.mySection {
+  height: 100vh;
+  background:
+    linear-gradient(160deg, rgba(0,0,0,0.78) 40%, rgba(123,95,255,0.18) 100%),
+    url('images/image1.png') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  padding-left: 80px;
+}
+
+.hero-tag {
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.mySectiontext h2 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 68px;
+  font-weight: 700;
+  line-height: 1.05;
+  color: #fff;
+  margin-bottom: 14px;
+}
+
+.mySectiontext h2 span {
+  color: var(--accent);
+}
+
+.hero-sub {
+  color: var(--muted);
+  font-size: 18px;
+  margin-bottom: 32px;
+  letter-spacing: 1px;
+}
+
+.hero-btns {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.browse-btn {
+  display: inline-block;
+  padding: 13px 30px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  box-shadow: 0 0 22px rgba(0,200,255,0.4);
+  transition: all 0.25s ease;
+}
+
+.browse-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 35px rgba(0,200,255,0.6);
+}
+
+.prebook-btn-hero {
+  display: inline-block;
+  padding: 13px 28px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--accent2), var(--red));
+  box-shadow: 0 0 22px rgba(123,95,255,0.35);
+  transition: all 0.25s ease;
+}
+
+.prebook-btn-hero:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 35px rgba(123,95,255,0.55);
+}
+
+/* ── SECTION LABELS ── */
+.section-tag {
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: var(--accent);
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+/* ── FEATURED CARS ── */
+.cars {
+  padding: 90px 60px;
+  text-align: center;
+}
+
+.cars h2 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 44px;
+  color: #fff;
+}
+
+.car-container {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.car {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 24px;
+  border-radius: 14px;
+  width: 270px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.car:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,200,255,0.12);
+  border-color: rgba(0,200,255,0.25);
+}
+
+.car img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 14px;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+}
+
+.car h3 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.car-price {
+  color: var(--accent);
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.car-info {
+  color: var(--muted);
+  font-size: 12.5px;
+  margin-bottom: 16px;
+}
+
+.car button {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  cursor: pointer;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.car button:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+/* ── WHY SECTION ── */
+.why {
+  padding: 90px 60px;
+  text-align: center;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.why h2 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 44px;
+  color: #fff;
+}
+
+.why-container {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.why-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 32px 28px;
+  width: 260px;
+  border-radius: 14px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeUp 0.7s ease both;
+}
+
+.why-card:nth-child(2) { animation-delay: 0.15s; }
+.why-card:nth-child(3) { animation-delay: 0.3s; }
+
+.why-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 36px rgba(0,200,255,0.1);
+}
+
+.why-icon {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.why-card h3 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.why-card p {
+  color: var(--muted);
+  font-size: 13.5px;
+  line-height: 1.6;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── DIVIDER ── */
+.divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--accent), transparent);
+  margin: 0 60px;
+  opacity: 0.4;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .mySection { padding-left: 32px; }
+  .mySectiontext h2 { font-size: 48px; }
+  .cars, .why { padding: 60px 24px; }
+}
+
+@media (max-width: 600px) {
+  .mySection { padding: 0 20px; align-items: flex-end; padding-bottom: 60px; }
+  .mySectiontext h2 { font-size: 36px; }
+  .hero-sub { font-size: 15px; }
+  .car { width: 100%; max-width: 340px; }
+  .why-card { width: 100%; max-width: 340px; }
+}

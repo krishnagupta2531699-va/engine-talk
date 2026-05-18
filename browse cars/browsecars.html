@@ -1,135 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-<title>Browse Cars - Engine Talk</title>
-<link rel="stylesheet" href="browsecars.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browse Cars — Engine Talk</title>
+  <link rel="stylesheet" href="../shared.css">
+  <link rel="stylesheet" href="browsecars.css">
 </head>
+<body class="page-body">
 
-<body>
+  <header>
+    <h1>ENGINE <span>TALK</span></h1>
+    <nav>
+      <a href="../home page/home.html">Home</a>
+      <a href="../browse cars/browsecars.html" class="active">Browse Cars</a>
+      <a href="../garage/index.html">Garage</a>
+      <a href="../about us/aboutus.html">About</a>
+      <a href="../contact/contact.html">Contact</a>
+      <a href="../addtocart page/addtocart.html" class="cart-link">🛒 Cart</a>
+      <a href="../contact/contact.html" class="contact-btn">📞 Contact Us</a>
+      <a href="../login page/login.html">Login</a>
+    </nav>
+  </header>
 
-<header>
-<h1>ENGINE TALK</h1>
+  <section class="cars">
+    <div class="cars-header">
+      <p class="section-tag">FULL COLLECTION</p>
+      <h2>Luxury Cars</h2>
+    </div>
 
-<nav>
- <a href="../homepage/home.html">Home</a>
-   <a href="../browse cars/browsecars.html">Browse Cars</a>
- <a href="../about us/aboutus.html">About</a>
-<a href="../addtocart page/addtocart.html">🛒 Cart </a>
-<a href="../login page/login.html">Login</a>
-</nav>
+    <div class="car-container">
 
-</header>
+      <div class="car">
+        <img src="images/m5.png" alt="BMW M5">
+        <h3>BMW M5</h3>
+        <p class="car-price">$110,000</p>
+        <button onclick="addToCart('BMW M5',110000)">Add to Cart</button>
+      </div>
 
+      <div class="car">
+        <img src="images/m4.png" alt="BMW M4">
+        <h3>BMW M4</h3>
+        <p class="car-price">$85,000</p>
+        <button onclick="addToCart('BMW M4',85000)">Add to Cart</button>
+      </div>
 
-<section class="cars">
+      <div class="car">
+        <img src="images/r8.png" alt="Audi R8">
+        <h3>Audi R8</h3>
+        <p class="car-price">$120,000</p>
+        <button onclick="addToCart('Audi R8',120000)">Add to Cart</button>
+      </div>
 
-<h2>Luxury Cars Collection</h2>
+      <div class="car">
+        <img src="images/rs7.png" alt="Audi RS7">
+        <h3>Audi RS7</h3>
+        <p class="car-price">$115,000</p>
+        <button onclick="addToCart('Audi RS7',115000)">Add to Cart</button>
+      </div>
 
-<div class="car-container">
+      <div class="car">
+        <img src="images/huracan.png" alt="Lamborghini Huracan">
+        <h3>Lamborghini Huracan</h3>
+        <p class="car-price">$230,000</p>
+        <button onclick="addToCart('Lamborghini Huracan',230000)">Add to Cart</button>
+      </div>
 
+      <div class="car">
+        <img src="images/aventador.png" alt="Lamborghini Aventador">
+        <h3>Lamborghini Aventador</h3>
+        <p class="car-price">$400,000</p>
+        <button onclick="addToCart('Lamborghini Aventador',400000)">Add to Cart</button>
+      </div>
 
-<div class="car">
-<img src="images/m5.png">
-<h3>BMW M5</h3>
-<p>$110000</p>
-<button onclick="addToCart('BMW M5',110000)">Add to Cart</button>
-</div>
+      <div class="car">
+        <img src="images/ferrari.png" alt="Ferrari F8">
+        <h3>Ferrari F8</h3>
+        <p class="car-price">$300,000</p>
+        <button onclick="addToCart('Ferrari F8',300000)">Add to Cart</button>
+      </div>
 
+      <div class="car">
+        <img src="images/roma.png" alt="Ferrari Roma">
+        <h3>Ferrari Roma</h3>
+        <p class="car-price">$220,000</p>
+        <button onclick="addToCart('Ferrari Roma',220000)">Add to Cart</button>
+      </div>
 
-<div class="car">
-<img src="images/m4.png">
-<h3>BMW M4</h3>
-<p>$85000</p>
-<button onclick="addToCart('BMW M4',85000)">Add to Cart</button>
-</div>
+      <div class="car">
+        <img src="images/gtr.png" alt="Nissan GTR">
+        <h3>Nissan GTR</h3>
+        <p class="car-price">$113,000</p>
+        <button onclick="addToCart('Nissan GTR',113000)">Add to Cart</button>
+      </div>
 
+      <div class="car">
+        <img src="images/911.png" alt="Porsche 911">
+        <h3>Porsche 911</h3>
+        <p class="car-price">$150,000</p>
+        <button onclick="addToCart('Porsche 911',150000)">Add to Cart</button>
+      </div>
 
-<div class="car">
-<img src="images/r8.png">
-<h3>Audi R8</h3>
-<p>$120000</p>
-<button onclick="addToCart('Audi R8',120000)">Add to Cart</button>
-</div>
+      <div class="car">
+        <img src="images/tesla.png" alt="Tesla Model S Plaid">
+        <h3>Tesla Model S Plaid</h3>
+        <p class="car-price">$99,000</p>
+        <button onclick="addToCart('Tesla Model S Plaid',99000)">Add to Cart</button>
+      </div>
 
+      <div class="car">
+        <img src="images/rolls.png" alt="Rolls Royce Ghost">
+        <h3>Rolls Royce Ghost</h3>
+        <p class="car-price">$350,000</p>
+        <button onclick="addToCart('Rolls Royce Ghost',350000)">Add to Cart</button>
+      </div>
 
-<div class="car">
-<img src="images/rs7.png">
-<h3>Audi RS7</h3>
-<p>$115000</p>
-<button onclick="addToCart('Audi RS7',115000)">Add to Cart</button>
-</div>
+    </div>
+  </section>
 
-
-<div class="car">
-<img src="images/huracan.png">
-<h3>Lamborghini Huracan</h3>
-<p>$230000</p>
-<button onclick="addToCart('Lamborghini Huracan',230000)">Add to Cart</button>
-</div>
-
-
-<div class="car">
-<img src="images/aventador.png">
-<h3>Lamborghini Aventador</h3>
-<p>$400000</p>
-<button onclick="addToCart('Lamborghini Aventador',400000)">Add to Cart</button>
-</div>
-
-
-<div class="car">
-<img src="images/ferrari.png">
-<h3>Ferrari F8</h3>
-<p>$300000</p>
-<button onclick="addToCart('Ferrari F8',300000)">Add to Cart</button>
-</div>
-
-
-<div class="car">
-<img src="images/roma.png">
-<h3>Ferrari Roma</h3>
-<p>$220000</p>
-<button onclick="addToCart('Ferrari Roma',220000)">Add to Cart</button>
-</div>
-
-
-<div class="car">
-<img src="images/gtr.png">
-<h3>Nissan GTR</h3>
-<p>$113000</p>
-<button onclick="addToCart('Nissan GTR',113000)">Add to Cart</button>
-</div>
-
-
-<div class="car">
-<img src="images/911.png">
-<h3>Porsche 911</h3>
-<p>$150000</p>
-<button onclick="addToCart('Porsche 911',150000)">Add to Cart</button>
-</div>
-
-
-<div class="car">
-<img src="images/tesla.png">
-<h3>Tesla Model S Plaid</h3>
-<p>$99000</p>
-<button onclick="addToCart('Tesla Model S Plaid',99000)">Add to Cart</button>
-</div>
-
-
-<div class="car">
-<img src="images/rolls.png">
-<h3>Rolls Royce Ghost</h3>
-<p>$350000</p>
-<button onclick="addToCart('Rolls Royce Ghost',350000)">Add to Cart</button>
-</div>
-
-
-</div>
-</section>
-
-
-<script src="browsecars.js"></script>
-
+  <script src="browsecars.js"></script>
 </body>
 </html>

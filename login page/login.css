@@ -1,113 +1,128 @@
+/* login.css — Engine Talk Login/Signup Page */
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: Arial, Helvetica, sans-serif;
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at 70% 40%, rgba(123,95,255,0.15) 0%, transparent 60%),
+    radial-gradient(ellipse at 20% 80%, rgba(0,200,255,0.1) 0%, transparent 50%),
+    var(--bg);
+  display: flex;
+  flex-direction: column;
 }
 
-body{
-    height:100vh;
-    background: url("login bg.jpeg") no-repeat center center/cover;
-    display:flex;
-    flex-direction:column;
+/* Push content below fixed header */
+.login-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 20px 40px;
 }
 
-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 60px;
-    background:rgba(0,0,0,0.6);
-    backdrop-filter: blur(6px);
+/* ── LOGIN BOX ── */
+.login-box {
+  width: 100%;
+  max-width: 420px;
+  background: rgba(15, 15, 26, 0.85);
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 18px;
+  padding: 44px 40px 38px;
+  backdrop-filter: blur(20px);
+  box-shadow:
+    0 0 60px rgba(0,0,0,0.5),
+    0 0 0 1px rgba(255,255,255,0.04) inset;
+  position: relative;
+  overflow: hidden;
 }
 
-header h1{
-    color:white;
-    letter-spacing:3px;
+/* Glowing top accent bar */
+.box-accent {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2), var(--red));
+  border-radius: 18px 18px 0 0;
 }
 
-nav a{
-    color:white;
-    margin-left:25px;
-    text-decoration:none;
-    font-size:16px;
+.login-box h2 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 4px;
+  letter-spacing: 1px;
 }
 
-nav a:hover{
-    color:#00eaff;
+.login-sub {
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 28px;
 }
 
-.login-section{
-    flex:1;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+/* Inputs — uses shared.css base + override margin */
+.login-box input {
+  margin: 7px 0;
 }
 
-.login-box{
-    width:350px;
-    padding:40px;
-    border-radius:15px;
-
-    background: rgba(0,0,0,0.65);
-    backdrop-filter: blur(12px);
-
-    border:2px solid transparent;
-    border-image: linear-gradient(45deg,#00eaff,#ff00c8) 1;
-
-    box-shadow:0 0 25px rgba(0,0,0,0.6);
-    text-align:center;
+/* Submit button */
+.login-box button#mainBtn {
+  width: 100%;
+  padding: 13px;
+  margin-top: 18px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  transition: opacity 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 4px 20px rgba(0,200,255,0.25);
 }
 
-
-.login-box h2{
-    color:white;
-    margin-bottom:25px;
+.login-box button#mainBtn:hover {
+  opacity: 0.88;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(0,200,255,0.35);
 }
 
-.login-box input{
-    width:100%;
-    padding:12px;
-    margin:10px 0;
-    border:none;
-    border-radius:8px;
-    outline:none;
-    font-size:14px;
+.login-box button#mainBtn:active {
+  transform: scale(0.98);
 }
 
-
-.login-box button{
-    width:100%;
-    padding:12px;
-    margin-top:15px;
-    border:none;
-    border-radius:8px;
-
-    background: linear-gradient(45deg,#00eaff,#ff00c8);
-    color:white;
-    font-size:16px;
-    cursor:pointer;
-
-    transition:0.3s;
+/* Message text */
+#message {
+  margin-top: 14px;
+  font-size: 13.5px;
+  font-weight: 500;
+  min-height: 20px;
+  text-align: center;
 }
 
-.login-box button:hover{
-    transform:scale(1.05);
+/* Toggle line */
+.toggle-line {
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 18px;
+  text-align: center;
 }
 
-
-.login-box p{
-    color:white;
-    margin-top:15px;
-    font-size:14px;
+.toggle-line a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 6px;
+  transition: opacity 0.2s;
 }
 
-.login-box a{
-    color:#00eaff;
-    text-decoration:none;
-}
+.toggle-line a:hover { opacity: 0.75; }
 
-.login-box a:hover{
-    text-decoration:underline;
+/* ── RESPONSIVE ── */
+@media (max-width: 480px) {
+  .login-box {
+    padding: 36px 24px 30px;
+    border-radius: 14px;
+  }
 }

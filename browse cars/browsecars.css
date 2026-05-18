@@ -14,30 +14,83 @@ color:white;
 }
 
 
+/* ===== NAVBAR UPGRADE ===== */
+
 header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 60px;
-background:black;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 60px;
+  background:linear-gradient(to right,#020617,#000000);
+  box-shadow:0 2px 10px rgba(0,0,0,0.6);
 }
 
+/* Logo */
 header h1{
-color:white;
-letter-spacing:2px;
+  color:white;
+  letter-spacing:3px;
+  font-size:20px;
+  font-weight:600;
 }
 
+header h1 span{
+  color:#00c6ff;
+}
+
+/* Nav container */
+nav{
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
+
+/* Normal links */
 nav a{
-color:white;
-text-decoration:none;
-margin-left:25px;
-font-size:16px;
+  color:#cbd5f5;
+  text-decoration:none;
+  font-size:14px;
+  padding:8px 14px;
+  border-radius:8px;
+  transition:0.3s;
 }
 
+/* Hover effect */
 nav a:hover{
-color:#00c6ff;
+  color:white;
+  background:rgba(255,255,255,0.08);
 }
 
+/* Active/Home button */
+.nav-home{
+  background:#111827;
+  color:white;
+}
+
+/* Cart button */
+.nav-cart{
+  border:1px solid #00c6ff;
+  color:#00c6ff;
+}
+
+/* Pre-book button */
+.nav-prebook{
+  background:linear-gradient(45deg,#ff3cac,#784ba0);
+  color:white;
+}
+
+/* Login button */
+.nav-login{
+  background:linear-gradient(45deg,#4facfe,#00f2fe);
+  color:white;
+}
+
+/* Button hover glow */
+.nav-cart:hover,
+.nav-prebook:hover,
+.nav-login:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 10px rgba(0,198,255,0.6);
+}
 
 
 .cars{
@@ -185,4 +238,106 @@ grid-template-columns:repeat(2,1fr);
 grid-template-columns:1fr;
 }
 
+}
+
+/* =============================================
+   RESPONSIVE CSS — ADDED FOR MOBILE/TABLET
+   (Note: 900px and 600px breakpoints already
+    exist above for car-container grid only.
+    Below extends full layout responsiveness.)
+   ============================================= */
+
+/* ── TABLET (max-width: 768px) ── */
+@media (max-width: 768px) {
+  header {
+    padding: 14px 24px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  header h1 {
+    font-size: 22px;
+    letter-spacing: 1px;
+  }
+
+  nav a {
+    margin-left: 14px;
+    font-size: 14px;
+  }
+
+  .cars {
+    padding: 50px 24px;
+  }
+
+  .cars h2 {
+    font-size: 28px;
+    margin-bottom: 32px;
+  }
+
+  .car-container {
+    gap: 28px;
+    padding: 0 4px;
+  }
+
+  .car {
+    padding: 18px;
+  }
+
+  .car h3 {
+    font-size: 18px;
+  }
+
+  .car p {
+    font-size: 15px;
+  }
+}
+
+/* ── MOBILE (max-width: 480px) ── */
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 16px;
+  }
+
+  header h1 {
+    font-size: 18px;
+  }
+
+  nav a {
+    margin-left: 10px;
+    font-size: 13px;
+  }
+
+  .cars {
+    padding: 32px 16px;
+  }
+
+  .cars h2 {
+    font-size: 22px;
+    margin-bottom: 24px;
+  }
+
+  .car-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .car {
+    padding: 16px;
+  }
+
+  .car h3 {
+    font-size: 17px;
+  }
+
+  .car p {
+    font-size: 14px;
+  }
+
+  .car button {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+  }
 }
