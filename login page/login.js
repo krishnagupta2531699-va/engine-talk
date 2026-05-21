@@ -56,7 +56,7 @@ function submitForm() {
     if (email === storedEmail && password === storedPassword) {
       message.style.color = "lightgreen";
       message.innerText = "Login Successful!";
-      window.location.href = "home.html";
+      window.location.href = "../index.html";
     } else {
       message.style.color = "red";
       message.innerText = "Invalid Email or Password!";
