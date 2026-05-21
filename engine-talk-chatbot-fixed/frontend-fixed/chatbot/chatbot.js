@@ -1,7 +1,7 @@
 // Engine Talk — Chatbot Widget
 // Sends messages to the backend and shows replies in a chat window
 
-var BACKEND_URL = 'http://localhost:3000/chat';
+var BACKEND_URL = 'https://engine-talk.onrender.com/chat';
 var chatHistory = [];
 var waiting = false;
 
