@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Engine Talk — Chatbot Integration Demo</title>
+
+  <!--
+    ============================================================
+    HOW TO ADD THE CHATBOT TO ANY ENGINE TALK PAGE:
+    
+    Step 1: Copy chatbot.css and chatbot.js into your project
+    Step 2: Add the <link> tag below inside your <head>
+    Step 3: Add the <script> tag below before </body>
+    That's it! The chatbot auto-injects itself. ✅
+    ============================================================
+  -->
+
+  <!-- Google Fonts (matches Engine Talk theme) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Step 1: Link the chatbot CSS -->
+  <link rel="stylesheet" href="chatbot.css">
+
+  <style>
+    /* ── Demo Page Styles (Engine Talk theme) ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --accent  : #00c8ff;
+      --accent2 : #7b5fff;
+      --red     : #ff3c5a;
+      --bg      : #0a0a0f;
+      --surface : #12121a;
+      --card    : #1a1a28;
+      --border  : rgba(0,200,255,0.12);
+      --muted   : #888;
+    }
+
+    body {
+      background : var(--bg);
+      color      : #f0f0f0;
+      font-family: 'Inter', sans-serif;
+      min-height : 100vh;
+    }
+
+    header {
+      background     : rgba(10,10,15,0.96);
+      border-bottom  : 1px solid var(--border);
+      padding        : 18px 60px;
+      display        : flex;
+      align-items    : center;
+      justify-content: space-between;
+      position       : sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+    }
+
+    header h1 {
+      font-family  : 'Rajdhani', sans-serif;
+      font-size    : 24px;
+      font-weight  : 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    header h1 span { color: var(--accent); }
+
+    nav a {
+      color          : #aaa;
+      text-decoration: none;
+      font-size      : 13px;
+      font-weight    : 500;
+      margin-left    : 24px;
+      letter-spacing : 0.5px;
+      transition     : color 0.2s;
+    }
+    nav a:hover { color: var(--accent); }
+
+    /* Hero */
+    .hero {
+      min-height  : 92vh;
+      background  : linear-gradient(160deg, rgba(0,0,0,0.85) 40%, rgba(123,95,255,0.1) 100%),
+                    linear-gradient(180deg, #0a0a0f 0%, #0d1a26 100%);
+      display     : flex;
+      align-items : center;
+      padding     : 0 80px;
+      position    : relative;
+      overflow    : hidden;
+    }
+
+    /* Subtle grid overlay */
+    .hero::before {
+      content : '';
+      position: absolute;
+      inset   : 0;
+      background: repeating-linear-gradient(
+        0deg, transparent, transparent 60px,
+        rgba(0,200,255,0.03) 60px, rgba(0,200,255,0.03) 61px
+      ),
+      repeating-linear-gradient(
+        90deg, transparent, transparent 60px,
+        rgba(0,200,255,0.03) 60px, rgba(0,200,255,0.03) 61px
+      );
+      pointer-events: none;
+    }
+
+    .hero-content { position: relative; z-index: 1; }
+
+    .hero-tag {
+      font-size     : 11px;
+      letter-spacing: 4px;
+      color         : var(--accent);
+      font-weight   : 600;
+      text-transform: uppercase;
+      margin-bottom : 16px;
+    }
+
+    .hero h2 {
+      font-family : 'Rajdhani', sans-serif;
+      font-size   : 72px;
+      font-weight : 700;
+      line-height : 1.02;
+      color       : #fff;
+      margin-bottom: 16px;
+    }
+
+    .hero h2 span { color: var(--accent); }
+
+    .hero p {
+      color       : var(--muted);
+      font-size   : 18px;
+      margin-bottom: 36px;
+      max-width   : 480px;
+      line-height : 1.6;
+    }
+
+    .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+
+    .btn-primary {
+      padding    : 13px 32px;
+      font-size  : 14px;
+      font-weight: 600;
+      color      : #fff;
+      border     : none;
+      border-radius: 8px;
+      background : linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow : 0 0 22px rgba(0,200,255,0.4);
+      cursor     : pointer;
+      transition : all 0.25s ease;
+      text-decoration: none;
+      display    : inline-block;
+    }
+
+    .btn-primary:hover {
+      transform : translateY(-3px);
+      box-shadow: 0 0 35px rgba(0,200,255,0.6);
+    }
+
+    .btn-outline {
+      padding    : 12px 28px;
+      font-size  : 14px;
+      font-weight: 600;
+      color      : var(--accent);
+      border     : 1.5px solid rgba(0,200,255,0.4);
+      border-radius: 8px;
+      background : transparent;
+      cursor     : pointer;
+      transition : all 0.25s ease;
+      text-decoration: none;
+      display    : inline-block;
+    }
+
+    .btn-outline:hover {
+      background : rgba(0,200,255,0.08);
+      border-color: var(--accent);
+    }
+
+    /* Demo integration info box */
+    .info-box {
+      margin         : 60px 80px;
+      background     : var(--surface);
+      border         : 1px solid var(--border);
+      border-radius  : 14px;
+      padding        : 36px 40px;
+    }
+
+    .info-box h3 {
+      font-family  : 'Rajdhani', sans-serif;
+      font-size    : 22px;
+      color        : var(--accent);
+      margin-bottom: 16px;
+      letter-spacing: 1px;
+    }
+
+    .info-box p {
+      color      : #bbb;
+      font-size  : 14px;
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+
+    .code-block {
+      background   : #0d0d16;
+      border       : 1px solid var(--border);
+      border-radius: 8px;
+      padding      : 16px 18px;
+      font-family  : 'Courier New', monospace;
+      font-size    : 13px;
+      color        : #7dd3fc;
+      overflow-x   : auto;
+      margin       : 12px 0;
+      line-height  : 1.8;
+    }
+
+    .code-block .comment { color: #4b6a7f; }
+    .code-block .tag     { color: #86efac; }
+    .code-block .attr    { color: #fdba74; }
+    .code-block .val     { color: #f9a8d4; }
+
+    @media (max-width: 900px) {
+      header    { padding: 16px 24px; }
+      .hero     { padding: 0 32px; }
+      .hero h2  { font-size: 48px; }
+      .info-box { margin: 40px 24px; padding: 24px; }
+    }
+
+    @media (max-width: 600px) {
+      .hero     { padding: 40px 20px; min-height: 85vh; }
+      .hero h2  { font-size: 36px; }
+      .info-box { margin: 24px 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>ENGINE <span>TALK</span></h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Browse Cars</a>
+      <a href="#">Garage</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <p class="hero-tag">LUXURY AUTOMOTIVE MARKETPLACE</p>
+      <h2>Find Your<br><span>Dream Car</span></h2>
+      <p>Buy. Sell. Rev It Up. Ask our AI assistant anything about cars, pricing, and bookings.</p>
+      <div class="hero-btns">
+        <a href="#" class="btn-primary">Browse Cars</a>
+        <a href="#" class="btn-outline">💬 Chat with Rev AI</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Integration Guide -->
+  <div class="info-box">
+    <h3>⚡ CHATBOT INTEGRATION — HOW IT WORKS</h3>
+    <p>The chatbot widget auto-injects into any Engine Talk page. Just add these 2 lines to your HTML:</p>
+
+    <div class="code-block">
+<span class="comment">&lt;!-- Add this inside &lt;head&gt; --&gt;</span><br>
+<span class="tag">&lt;link</span> <span class="attr">rel=</span><span class="val">"stylesheet"</span> <span class="attr">href=</span><span class="val">"path/to/chatbot.css"</span><span class="tag">&gt;</span><br><br>
+<span class="comment">&lt;!-- Add this before &lt;/body&gt; --&gt;</span><br>
+<span class="tag">&lt;script</span> <span class="attr">src=</span><span class="val">"path/to/chatbot.js"</span><span class="tag">&gt;&lt;/script&gt;</span>
+    </div>
+
+    <p>Make sure your backend server is running on <strong style="color:var(--accent)">http://localhost:3000</strong> before testing.</p>
+    <p>👉 Look for the <strong style="color:var(--accent)">🚗 floating button</strong> at the bottom-right corner of this page!</p>
+  </div>
+
+  <!--
+    Step 2: Include the chatbot JavaScript (place before </body>)
+    This auto-creates the chat button and window in the DOM.
+  -->
+  <script src="chatbot.js"></script>
+
+</body>
+</html>
