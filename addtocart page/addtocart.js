@@ -34,10 +34,10 @@ div.appendChild(btn);
 
 container.appendChild(div);
 
-total+=item.price;
+total+=parseFloat(String(item.price).replace(/[^0-9.]/g,"")) || 0;
 }
 
-document.getElementById("totalPrice").innerText=total;
+document.getElementById("totalPrice").innerText=total.toLocaleString();
 
 }
 
