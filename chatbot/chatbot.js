@@ -1,4 +1,4 @@
-
+var KEY='ENTER API KEY'; 
 var H=[];
 
 async function send(){
