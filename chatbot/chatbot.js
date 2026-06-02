@@ -1,4 +1,4 @@
-var KEY='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'; 
+
 var H=[];
 
 async function send(){
